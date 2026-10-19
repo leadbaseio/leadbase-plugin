@@ -1,0 +1,26 @@
+{
+  "name": "leadbase-research",
+  "displayName": "Leadbase",
+  "version": "1.0.1",
+  "description": "Research companies, people and the web in live, editable sheets.",
+  "author": {
+    "name": "Workbase Platforms Sp. z o.o.",
+    "url": "https://www.leadbase.io"
+  },
+  "homepage": "https://www.leadbase.io",
+  "repository": "https://github.com/leadbaseio/leadbase-plugin",
+  "license": "LicenseRef-Leadbase-Plugin",
+  "keywords": [
+    "leads",
+    "company research",
+    "people",
+    "prospecting",
+    "spreadsheets",
+    "web research"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://www.leadbase.io/en/docs/settings/mcp",
+  "supportUrl": "https://www.leadbase.io/en/contact",
+  "privacyPolicyUrl": "https://www.leadbase.io/en/legal/privacy",
+  "termsOfServiceUrl": "https://www.leadbase.io/en/legal/terms"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "leadbase": {
+      "type": "http",
+      "url": "https://www.leadbase.io/api/mcp"
+    }
+  }
+}
