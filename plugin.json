@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "leadbase-research",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Research companies, professional contacts and the web with sources, saved in editable Leadbase sheets.",
   "author": {
     "name": "Workbase Platforms Sp. z o.o.",
@@ -10,7 +10,7 @@
   },
   "homepage": "https://www.leadbase.io",
   "repository": "https://github.com/leadbaseio/leadbase-plugin",
-  "license": "LicenseRef-Leadbase-Plugin",
+  "license": "MIT",
   "keywords": ["leads", "research", "companies", "contacts", "sources", "spreadsheets"],
   "extensions": {
     "com.openai": {

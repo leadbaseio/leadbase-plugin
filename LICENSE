@@ -1,21 +1,21 @@
-Leadbase Plugin-Nutzungslizenz
-Copyright 2026 Workbase Platforms Sp. z o.o. Alle Rechte vorbehalten.
+MIT License
 
-Du darfst dieses Plugin installieren und zur Verbindung mit Leadbase nutzen.
-Anthropic darf das unveränderte Plugin im Rahmen seines Software-Verzeichnisses
-bereitstellen und an Nutzer ausliefern. Andere Rechte, insbesondere an Marken,
-am Leadbase-Dienst oder am nicht enthaltenen Anwendungscode, werden nicht
-übertragen. Für den Leadbase-Dienst gelten dessen gesonderte Nutzungsbedingungen.
-Gesetzliche Rechte bleiben unberührt. Soweit gesetzlich zulässig, wird das Plugin
-ohne Zusicherung bestimmter Eigenschaften bereitgestellt.
+Copyright (c) 2026 Workbase Platforms Sp. z o.o.
 
-English translation (non-binding; the German text is authoritative)
-Leadbase Plugin Use License
-Copyright 2026 Workbase Platforms Sp. z o.o. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You may install and use this plugin to connect to Leadbase. Anthropic may make
-the unmodified plugin available and distribute it to users through its software
-directory. No other rights are granted, including rights to trademarks, the
-Leadbase service or application source code that is not included. Separate terms
-apply to the Leadbase service. Statutory rights remain unaffected. To the extent
-permitted by law, the plugin is provided without warranties of specific features.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

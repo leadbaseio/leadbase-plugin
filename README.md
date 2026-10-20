@@ -51,6 +51,10 @@ When a connected client calls a tool, the requested arguments and relevant sheet
 
 See the [privacy policy](https://www.leadbase.io/en/legal/privacy) for data processing, service providers, retention and deletion requests. The [service terms](https://www.leadbase.io/en/legal/terms) govern your Leadbase account.
 
+## License
+
+The files in this public plugin bundle are available under the [MIT License](LICENSE). The hosted Leadbase service and private application source are separate and are not licensed by this repository. Leadbase accounts remain subject to the service terms. The MIT license does not grant trademark rights. Vendored schemas retain their included upstream license.
+
 ## Help
 
 Maintainers can validate all manifests, shared endpoint configuration, skills and asset paths with `python -m pip install -r requirements-validation.txt` followed by `python scripts/validate-package.py`. The same check runs in GitHub Actions with read-only repository permissions. Official schemas are pinned in `schemas/`; their upstream license is included there. No validation code runs during plugin installation.
