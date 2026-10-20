@@ -14,6 +14,10 @@ Aus deiner Rechercheanfrage entstehen Unternehmen, Geschäftskontakte, Produkte 
 
 ## Konto verbinden
 
+Die Manifeste für Claude und Cursor nutzen dieselben zwei Skills und dieselbe `.mcp.json`. Dahinter steht ein gehosteter Leadbase-Dienst; das Paket enthält keinen privaten Anwendungscode.
+
+Für einen lokalen Cursor-Test kopierst du dieses Paket nach `~/.cursor/plugins/local/leadbase-research` und lädst ein Testfenster neu. Prüfe unter **Customize** die zwei Skills und den MCP-Server `leadbase`. Melde dich über den OAuth-Ablauf des Clients an. Dein Konto oder Team muss lokale Plugin-Importe erlauben. In anderen kompatiblen Clients nutzt du deren lokale Plugin-Installation oder fügst den unten genannten HTTPS-MCP-Endpunkt hinzu. Eine Marketplace-Veröffentlichung setzt die Prüfung der jeweiligen Plattform voraus.
+
 Du brauchst ein Leadbase-Konto mit Zugriff auf einen Arbeitsbereich. Füge dieses Plugin hinzu, verbinde den Leadbase-Connector und melde dich über OAuth an. Wähle deinen Arbeitsbereich. API-Schlüssel oder Passwörter gehören nicht in eine Unterhaltung. Plugin und Leadbase-Connector nutzen denselben Endpunkt; eine Verbindung genügt.
 
 Recherchen verbrauchen vorhandene Credits deines Arbeitsbereichs. Die Grenzen deines Tarifs gelten weiterhin. Das Verbinden, Öffnen von Sheets und Prüfen des Guthabens beauftragt keine kostenpflichtige Recherche. Deinen Tarif verwaltest du auf der Leadbase-Website. Das Plugin kauft keine Credits und versendet keine Kontaktansprache.
