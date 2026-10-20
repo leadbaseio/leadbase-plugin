@@ -1,0 +1,16 @@
+{
+  "name": "leadbase-research",
+  "version": "1.0.1",
+  "description": "Find companies, professional contacts and web research with sources, saved in editable Leadbase sheets.",
+  "author": {
+    "name": "Workbase Platforms Sp. z o.o.",
+    "email": "nils.kroeger@workbase.com"
+  },
+  "homepage": "https://www.leadbase.io",
+  "repository": "https://github.com/leadbaseio/leadbase-plugin",
+  "license": "LicenseRef-Leadbase-Plugin",
+  "keywords": ["leads", "research", "companies", "contacts", "sources", "spreadsheets"],
+  "logo": "assets/icon-marketplace.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
