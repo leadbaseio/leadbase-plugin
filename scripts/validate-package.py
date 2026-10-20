@@ -46,6 +46,20 @@ for servers, transport in ((legacy_servers, "http"), (portable_servers, "streama
         "url": "https://www.leadbase.io/api/mcp",
     }, "MCP endpoint, transport or credential configuration changed"
 
+gemini = read("gemini-extension.json")
+assert gemini["name"] == portable["name"]
+assert gemini["version"] == portable["version"], "Gemini version drift"
+assert gemini["description"].strip()
+assert gemini["mcpServers"] == {
+    "leadbase": {
+        "httpUrl": portable_servers["leadbase"]["url"],
+        "oauth": {
+            "enabled": True,
+            "scopes": ["openid", "offline_access", "mcp:read", "mcp:write"],
+        },
+    }
+}, "Gemini must use the same hosted service with per-user OAuth"
+
 registry = read("server.json")
 registry_schema = read("schemas/mcp-registry-server.schema.json")
 registry_validator = validator_for(registry_schema)
@@ -87,4 +101,4 @@ for field in ("logo", "logoDark", "composerIcon", "composerIconDark"):
 for field in ("websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"):
     assert interface[field].startswith("https://www.leadbase.io")
 
-print("Package valid: portable + Claude + Cursor + MCP Registry, shared skills, matching MCP service and contained assets.")
+print("Package valid: portable + Claude + Cursor + Gemini + MCP Registry, shared skills, matching MCP service and contained assets.")

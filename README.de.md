@@ -216,6 +216,7 @@ Nutze einen Client mit Unterstützung für Remote-MCP über Streamable HTTP und 
 | Codex und Agent-Plugins-1.0-Clients | Unterstützte Plugin-Installation mit diesem Paket | [Manifest](plugin.json) und [MCP-Konfiguration](mcp.json) |
 | Cursor | Unterstützten Plugin-Import nutzen oder Remote-MCP-Server hinzufügen | [Cursor-Manifest](.cursor-plugin/plugin.json) und [HTTP-Konfiguration](.mcp.json) |
 | Cline | Native HTTP-Verbindung hinzufügen und per OAuth freigeben | [Cline-Anleitung](docs/cline.md) |
+| Gemini CLI | Installiere die gemeinsame Erweiterung und verbinde deinen Leadbase-Workspace | [Gemini-Anleitung](docs/gemini.md) |
 | Weitere kompatible Clients | Endpunkt in den Einstellungen für Remote-MCP hinzufügen | [Allgemeine Anleitung](https://www.leadbase.io/de/docs/settings/mcp) |
 
 Direkte MCP-Verbindungen und Plugin-Pakete nutzen denselben Dienst. Die Veröffentlichung in einem Marketplace folgt dem Prüfprozess des jeweiligen Clients. Unterstützte direkte Verbindungen lassen sich über die passende Anleitung einrichten.
