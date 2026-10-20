@@ -4,7 +4,7 @@
 
 **Deine nächste Kundenliste beginnt mit einem Satz.**
 
-Sag deinem KI-Assistenten, welche Unternehmen oder Entscheider du erreichen möchtest. Leadbase macht daraus eine recherchierte, bearbeitbare Liste mit Quellen, die du prüfen, qualifizieren und für deinen Vertrieb nutzen kannst.
+Sag deinem KI-Assistenten, welche Unternehmen oder Entscheider du erreichen möchtest. Leadbase macht daraus eine recherchierte, bearbeitbare Liste und liefert Quellen dazu. Prüfe die Unternehmen und Geschäftskontakte, qualifiziere sie nach deinen Kriterien und nutze die Auswahl für deinen Vertrieb.
 
 Finde passende Zielkunden, recherchiere Geschäftskontakte und ergänze die Informationen, die einen Lead für dich interessant machen. Arbeite in einem kompatiblen KI-Assistenten oder öffne dasselbe gespeicherte Sheet direkt in Leadbase. Ergebnisse, Belege und weitere Recherchefragen bleiben zusammen.
 
