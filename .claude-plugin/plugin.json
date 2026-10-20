@@ -1,7 +1,7 @@
 {
   "name": "leadbase-research",
   "displayName": "Leadbase",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Research companies, people and the web in live, editable sheets.",
   "author": {
     "name": "Workbase Platforms Sp. z o.o.",
@@ -9,7 +9,7 @@
   },
   "homepage": "https://www.leadbase.io",
   "repository": "https://github.com/leadbaseio/leadbase-plugin",
-  "license": "LicenseRef-Leadbase-Plugin",
+  "license": "MIT",
   "keywords": [
     "leads",
     "company research",

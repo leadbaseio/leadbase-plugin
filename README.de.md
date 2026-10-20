@@ -51,6 +51,10 @@ Bei einem Werkzeugaufruf werden die angeforderten Argumente und der relevante Sh
 
 Die [Datenschutzerklärung](https://www.leadbase.io/de/legal/privacy) beschreibt Datenverarbeitung, Dienstleister, Speicherfristen und Löschanfragen. Für dein Konto gelten die [Nutzungsbedingungen](https://www.leadbase.io/de/legal/terms).
 
+## Lizenz
+
+Die Dateien in diesem öffentlichen Plugin-Paket stehen unter der [MIT-Lizenz](LICENSE). Der gehostete Leadbase-Dienst und der private Anwendungscode sind davon getrennt und werden durch dieses Repository nicht lizenziert. Für dein Leadbase-Konto gelten weiterhin die Nutzungsbedingungen des Dienstes. Die MIT-Lizenz gewährt keine Markenrechte. Die eingebundenen Schemas behalten ihre mitgelieferte ursprüngliche Lizenz.
+
 ## Hilfe
 
 Als Maintainer prüfst du alle Manifeste, die gemeinsame Endpunkt-Konfiguration, Skills und Asset-Pfade mit `python -m pip install -r requirements-validation.txt` und anschließend `python scripts/validate-package.py`. Dieselbe Prüfung läuft in GitHub Actions mit Lesezugriff auf das Repository. Die offiziellen Schemas liegen fest versioniert unter `schemas/`; ihre ursprüngliche Lizenz ist dort enthalten. Bei der Plugin-Installation wird kein Prüfcode ausgeführt.
