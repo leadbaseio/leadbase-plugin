@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
+from jsonschema.validators import validator_for
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -45,6 +46,22 @@ for servers, transport in ((legacy_servers, "http"), (portable_servers, "streama
         "url": "https://www.leadbase.io/api/mcp",
     }, "MCP endpoint, transport or credential configuration changed"
 
+registry = read("server.json")
+registry_schema = read("schemas/mcp-registry-server.schema.json")
+registry_validator = validator_for(registry_schema)
+registry_validator.check_schema(registry_schema)
+registry_validator(registry_schema).validate(registry)
+assert registry["$schema"] == registry_schema["$id"]
+assert registry["name"] == "io.leadbase/leadbase", "Preserve the verified registry identity"
+assert registry["version"] == portable["version"], "Registry version drift"
+assert registry["title"] == "Leadbase"
+assert registry["remotes"] == [portable_servers["leadbase"]]
+assert not registry.get("packages"), "Leadbase uses its hosted service, not a local server package"
+assert not registry.get("repository"), "The public bundle does not contain the private server implementation"
+assert registry["websiteUrl"] == "https://www.leadbase.io/en/docs/settings/mcp"
+publisher_metadata = registry["_meta"]["io.modelcontextprotocol.registry/publisher-provided"]
+assert publisher_metadata["pluginRepository"] == portable["repository"]
+
 cursor = manifests[2]
 assert contained(cursor["mcpServers"]) == ROOT / ".mcp.json"
 assert contained(cursor["skills"]) == ROOT / "skills"
@@ -70,4 +87,4 @@ for field in ("logo", "logoDark", "composerIcon", "composerIconDark"):
 for field in ("websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"):
     assert interface[field].startswith("https://www.leadbase.io")
 
-print("Package valid: portable + Claude + Cursor, shared skills, matching MCP service and contained assets.")
+print("Package valid: portable + Claude + Cursor + MCP Registry, shared skills, matching MCP service and contained assets.")

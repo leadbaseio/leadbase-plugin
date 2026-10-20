@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.leadbase/leadbase",
+  "title": "Leadbase",
+  "description": "Research companies, contacts, products and the web with sources in editable sheets.",
+  "version": "1.0.2",
+  "websiteUrl": "https://www.leadbase.io/en/docs/settings/mcp",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/leadbaseio/leadbase-plugin/08fbc48adc2e451e4d2358d77c658407209a2944/assets/icon-marketplace.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/leadbaseio/leadbase-plugin/08fbc48adc2e451e4d2358d77c658407209a2944/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.leadbase.io/api/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "pluginRepository": "https://github.com/leadbaseio/leadbase-plugin",
+      "privacyPolicyUrl": "https://www.leadbase.io/en/legal/privacy",
+      "termsOfServiceUrl": "https://www.leadbase.io/en/legal/terms",
+      "supportUrl": "https://www.leadbase.io/en/contact",
+      "authentication": "OAuth; a Leadbase account and workspace access are required.",
+      "pricing": "The plugin is free. Research uses the connected workspace's existing Leadbase credits and plan limits.",
+      "interface": "Interactive sheets require host MCP Apps support; other clients receive structured results and a Leadbase link."
+    }
+  }
+}
