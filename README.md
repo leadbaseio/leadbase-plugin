@@ -21,11 +21,14 @@ This is the shared Leadbase plugin bundle, not a Claude-only integration. Every 
 | Codex and Agent Plugins 1.0 clients | `plugin.json` | `mcp.json` (Streamable HTTP) |
 | Cursor | `.cursor-plugin/plugin.json` | `.mcp.json` (HTTP compatibility format) |
 | Claude | `.claude-plugin/plugin.json` | `.mcp.json` (HTTP compatibility format) |
+| Cline | [Cline setup](docs/cline.md) | Native remote HTTP connection with OAuth |
 | Grok Bot and compatible MCP clients | Host-supported plugin import or MCP server URL | `https://www.leadbase.io/api/mcp` |
 
 Both MCP files describe the same OAuth-protected endpoint using the transport spelling required by their format. Packaging compatibility is separate from marketplace approval and authenticated host testing. Existing OpenAI and Claude submissions retain their original identities and submitted versions; this repository does not replace those submissions automatically.
 
 The official MCP Registry manifest is [server.json](server.json), under the domain-verified name `io.leadbase/leadbase`. It describes the hosted connection; it does not distribute the private server implementation. See [registry publishing](docs/registry.md) for maintainer instructions.
+
+[MCP.so setup](docs/mcp-so.md) explains how to connect from a directory listing. Marketplace review and publication are independent of being able to connect directly.
 
 For a local Cursor test, copy this bundle into `~/.cursor/plugins/local/leadbase-research` and reload a test window. Open **Customize** and verify the two skills and the `leadbase` MCP server. Authenticate through the host's OAuth flow. Local plugin imports must be allowed by your account or team. To test another compatible client, use its local plugin installation flow or add the HTTPS MCP endpoint below. A marketplace listing is subject to the platform's review.
 
