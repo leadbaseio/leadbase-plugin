@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "leadbase-research",
+  "version": "1.0.1",
+  "description": "Research companies, professional contacts and the web with sources, saved in editable Leadbase sheets.",
+  "author": {
+    "name": "Workbase Platforms Sp. z o.o.",
+    "email": "nils.kroeger@workbase.com",
+    "url": "https://www.leadbase.io"
+  },
+  "homepage": "https://www.leadbase.io",
+  "repository": "https://github.com/leadbaseio/leadbase-plugin",
+  "license": "LicenseRef-Leadbase-Plugin",
+  "keywords": ["leads", "research", "companies", "contacts", "sources", "spreadsheets"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Leadbase",
+        "shortDescription": "Find leads. Build your list.",
+        "longDescription": "Research companies, professional contacts, products and public web content with sources. Create a new list with one result per row, fill missing details in existing rows or columns, follow research progress, and review available evidence in editable Leadbase sheets. Connect your Leadbase workspace through OAuth. The plugin is free; research uses your workspace's existing Leadbase credits and plan limits. Available interactive sheet views depend on the host; text-only clients receive structured results and a Leadbase link.",
+        "developerName": "Workbase Platforms Sp. z o.o.",
+        "category": "Productivity",
+        "websiteURL": "https://www.leadbase.io",
+        "supportURL": "https://www.leadbase.io/en/contact",
+        "privacyPolicyURL": "https://www.leadbase.io/en/legal/privacy",
+        "termsOfServiceURL": "https://www.leadbase.io/en/legal/terms",
+        "logo": "assets/icon.png",
+        "logoDark": "assets/icon-dark.svg",
+        "composerIcon": "assets/icon-light.svg",
+        "composerIconDark": "assets/icon-dark.svg",
+        "brandColor": "#373632",
+        "brandColorDark": "#f6f5f1",
+        "defaultPrompt": [
+          "Find 5 independent coffee roasters in Berlin with official websites and sources. Save one company per row in a sheet.",
+          "Fill the empty headquarters cells in this sheet using official sources. Keep existing values.",
+          "Open my Leadbase workspace and show the progress of my latest research."
+        ]
+      }
+    }
+  }
+}

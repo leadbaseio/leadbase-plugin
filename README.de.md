@@ -14,7 +14,16 @@ Aus deiner Rechercheanfrage entstehen Unternehmen, Geschäftskontakte, Produkte 
 
 ## Konto verbinden
 
-Die Manifeste für Claude und Cursor nutzen dieselben zwei Skills und dieselbe `.mcp.json`. Dahinter steht ein gehosteter Leadbase-Dienst; das Paket enthält keinen privaten Anwendungscode.
+Dies ist das gemeinsame Leadbase-Plugin-Paket für mehrere Clients. Alle Formate nutzen dieselben zwei Skills und denselben gehosteten MCP-Dienst. Das Paket enthält keinen privaten Anwendungscode.
+
+| Client | Einstiegspunkt im Paket | Verbindung |
+| --- | --- | --- |
+| Codex und Clients für Agent Plugins 1.0 | `plugin.json` | `mcp.json` (Streamable HTTP) |
+| Cursor | `.cursor-plugin/plugin.json` | `.mcp.json` (HTTP-Kompatibilitätsformat) |
+| Claude | `.claude-plugin/plugin.json` | `.mcp.json` (HTTP-Kompatibilitätsformat) |
+| Grok Bot und kompatible MCP-Clients | Plugin-Import des Clients oder MCP-Server-URL | `https://www.leadbase.io/api/mcp` |
+
+Beide MCP-Dateien beschreiben denselben OAuth-geschützten Endpunkt mit der für das jeweilige Format nötigen Transportbezeichnung. Paketkompatibilität, Marketplace-Freigabe und angemeldete Tests im Client sind getrennte Prüfungen. Bestehende Einreichungen bei OpenAI und Claude behalten ihre bisherigen Identitäten und eingereichten Versionen; dieses Repository ersetzt sie nicht automatisch.
 
 Für einen lokalen Cursor-Test kopierst du dieses Paket nach `~/.cursor/plugins/local/leadbase-research` und lädst ein Testfenster neu. Prüfe unter **Customize** die zwei Skills und den MCP-Server `leadbase`. Melde dich über den OAuth-Ablauf des Clients an. Dein Konto oder Team muss lokale Plugin-Importe erlauben. In anderen kompatiblen Clients nutzt du deren lokale Plugin-Installation oder fügst den unten genannten HTTPS-MCP-Endpunkt hinzu. Eine Marketplace-Veröffentlichung setzt die Prüfung der jeweiligen Plattform voraus.
 
@@ -32,7 +41,7 @@ Recherchen verbrauchen vorhandene Credits deines Arbeitsbereichs. Die Grenzen de
 
 ## Sheets und Ergebnisse
 
-Unterstützte Claude-Oberflächen können das interaktive Leadbase-Sheet über MCP Apps anzeigen. Clients ohne UI erhalten strukturierte Ergebnisse und einen Leadbase-Link. Verfügbare Anzeigemodi hängen vom Client ab. Laufender Fortschritt ist von fertigen Ergebnissen zu unterscheiden; der Abschluss der Ausführung ist unabhängig von der endgültigen Credit-Abrechnung. Ergebnisse können unvollständig sein oder ausreichende Belege vermissen lassen. Prüfe die Quellen, bevor du auf Basis der Ergebnisse handelst.
+Clients mit MCP-Apps-Unterstützung können das interaktive Leadbase-Sheet anzeigen. Clients ohne UI erhalten strukturierte Ergebnisse und einen Leadbase-Link. Verfügbare Anzeigemodi hängen vom Client ab. Laufender Fortschritt ist von fertigen Ergebnissen zu unterscheiden; der Abschluss der Ausführung ist unabhängig von der endgültigen Credit-Abrechnung. Ergebnisse können unvollständig sein oder ausreichende Belege vermissen lassen. Prüfe die Quellen, bevor du auf Basis der Ergebnisse handelst.
 
 ## Daten und Berechtigungen
 
@@ -43,5 +52,7 @@ Bei einem Werkzeugaufruf werden die angeforderten Argumente und der relevante Sh
 Die [Datenschutzerklärung](https://www.leadbase.io/de/legal/privacy) beschreibt Datenverarbeitung, Dienstleister, Speicherfristen und Löschanfragen. Für dein Konto gelten die [Nutzungsbedingungen](https://www.leadbase.io/de/legal/terms).
 
 ## Hilfe
+
+Als Maintainer prüfst du alle Manifeste, die gemeinsame Endpunkt-Konfiguration, Skills und Asset-Pfade mit `python -m pip install -r requirements-validation.txt` und anschließend `python scripts/validate-package.py`. Dieselbe Prüfung läuft in GitHub Actions mit Lesezugriff auf das Repository. Die offiziellen Schemas liegen fest versioniert unter `schemas/`; ihre ursprüngliche Lizenz ist dort enthalten. Bei der Plugin-Installation wird kein Prüfcode ausgeführt.
 
 [Einrichtung und Nutzung](https://www.leadbase.io/de/docs/settings/mcp) · [Support](https://www.leadbase.io/de/contact) · [English](README.md)
