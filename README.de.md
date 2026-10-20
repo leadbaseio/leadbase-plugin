@@ -25,6 +25,8 @@ Dies ist das gemeinsame Leadbase-Plugin-Paket für mehrere Clients. Alle Formate
 
 Beide MCP-Dateien beschreiben denselben OAuth-geschützten Endpunkt mit der für das jeweilige Format nötigen Transportbezeichnung. Paketkompatibilität, Marketplace-Freigabe und angemeldete Tests im Client sind getrennte Prüfungen. Bestehende Einreichungen bei OpenAI und Claude behalten ihre bisherigen Identitäten und eingereichten Versionen; dieses Repository ersetzt sie nicht automatisch.
 
+Der Eintrag für die offizielle MCP Registry steht in [server.json](server.json) unter dem über die Domain verifizierten Namen `io.leadbase/leadbase`. Er beschreibt die gehostete Verbindung und enthält keinen privaten Servercode. Hinweise zur Veröffentlichung findest du in [registry publishing](docs/registry.md).
+
 Für einen lokalen Cursor-Test kopierst du dieses Paket nach `~/.cursor/plugins/local/leadbase-research` und lädst ein Testfenster neu. Prüfe unter **Customize** die zwei Skills und den MCP-Server `leadbase`. Melde dich über den OAuth-Ablauf des Clients an. Dein Konto oder Team muss lokale Plugin-Importe erlauben. In anderen kompatiblen Clients nutzt du deren lokale Plugin-Installation oder fügst den unten genannten HTTPS-MCP-Endpunkt hinzu. Eine Marketplace-Veröffentlichung setzt die Prüfung der jeweiligen Plattform voraus.
 
 Du brauchst ein Leadbase-Konto mit Zugriff auf einen Arbeitsbereich. Füge dieses Plugin hinzu, verbinde den Leadbase-Connector und melde dich über OAuth an. Wähle deinen Arbeitsbereich. API-Schlüssel oder Passwörter gehören nicht in eine Unterhaltung. Plugin und Leadbase-Connector nutzen denselben Endpunkt; eine Verbindung genügt.

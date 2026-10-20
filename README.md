@@ -25,6 +25,8 @@ This is the shared Leadbase plugin bundle, not a Claude-only integration. Every 
 
 Both MCP files describe the same OAuth-protected endpoint using the transport spelling required by their format. Packaging compatibility is separate from marketplace approval and authenticated host testing. Existing OpenAI and Claude submissions retain their original identities and submitted versions; this repository does not replace those submissions automatically.
 
+The official MCP Registry manifest is [server.json](server.json), under the domain-verified name `io.leadbase/leadbase`. It describes the hosted connection; it does not distribute the private server implementation. See [registry publishing](docs/registry.md) for maintainer instructions.
+
 For a local Cursor test, copy this bundle into `~/.cursor/plugins/local/leadbase-research` and reload a test window. Open **Customize** and verify the two skills and the `leadbase` MCP server. Authenticate through the host's OAuth flow. Local plugin imports must be allowed by your account or team. To test another compatible client, use its local plugin installation flow or add the HTTPS MCP endpoint below. A marketplace listing is subject to the platform's review.
 
 You need a Leadbase account and access to a workspace. Add this plugin, connect the Leadbase connector and complete the OAuth sign-in flow. Choose the workspace you want to use. No API key or password belongs in a conversation. The plugin and the Leadbase connector use the same endpoint, so you only need one connection.
