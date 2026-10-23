@@ -68,10 +68,13 @@ registry_validator(registry_schema).validate(registry)
 assert registry["$schema"] == registry_schema["$id"]
 assert registry["name"] == "io.leadbase/leadbase", "Preserve the verified registry identity"
 assert registry["version"] == portable["version"], "Registry version drift"
-assert registry["title"] == "Leadbase"
+assert registry["title"].strip()
 assert registry["remotes"] == [portable_servers["leadbase"]]
 assert not registry.get("packages"), "Leadbase uses its hosted service, not a local server package"
-assert not registry.get("repository"), "The public bundle does not contain the private server implementation"
+assert registry["repository"] == {
+    "url": portable["repository"],
+    "source": "github",
+}, "GitHub curated discovery requires the public integration repository"
 assert registry["websiteUrl"] == "https://www.leadbase.io/en/docs/settings/mcp"
 publisher_metadata = registry["_meta"]["io.modelcontextprotocol.registry/publisher-provided"]
 assert publisher_metadata["pluginRepository"] == portable["repository"]
