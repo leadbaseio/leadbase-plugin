@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.leadbase/leadbase",
-  "title": "Leadbase",
-  "description": "Research companies, contacts, products and the web with sources in editable sheets.",
-  "version": "1.0.2",
+  "description": "AI B2B lead generation: find matching companies and decision-makers. Start with 200 free credits.",
+  "title": "Leadbase | AI B2B Lead Generation",
+  "version": "1.0.8",
   "websiteUrl": "https://www.leadbase.io/en/docs/settings/mcp",
   "icons": [
     {
@@ -29,13 +29,29 @@
   ],
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
-      "pluginRepository": "https://github.com/leadbaseio/leadbase-plugin",
-      "privacyPolicyUrl": "https://www.leadbase.io/en/legal/privacy",
-      "termsOfServiceUrl": "https://www.leadbase.io/en/legal/terms",
-      "supportUrl": "https://www.leadbase.io/en/contact",
       "authentication": "OAuth; a Leadbase account and workspace access are required.",
-      "pricing": "The plugin is free. Research uses the connected workspace's existing Leadbase credits and plan limits.",
-      "interface": "Interactive sheets require host MCP Apps support; other clients receive structured results and a Leadbase link."
+      "interface": "Interactive sheets require host MCP Apps support; other clients receive structured results and a Leadbase link.",
+      "keywords": [
+        "B2B lead generation",
+        "AI sales prospecting",
+        "DACH company research",
+        "contact enrichment",
+        "ideal customer profile",
+        "account qualification",
+        "decision-maker discovery",
+        "MCP",
+        "editable research sheets"
+      ],
+      "overview": "Find your next B2B customers. Know why they fit.\n\nDescribe the companies you want to reach. Leadbase researches matching businesses and relevant decision-makers, then saves the results with sources in an editable sheet. Start with 200 free credits in a new workspace and test your own target market.\n\nQualify companies by the criteria that matter to your offer: services, region and publicly evidenced business signals. Research DACH SMEs and German craft businesses alongside other target markets.\n\nTurn existing accounts into a more useful prospect list. Enrich selected rows or entire columns, research relevant professional contacts and check available contact details. Review the evidence behind returned information before choosing your next step.\n\nKeep control of the result. Follow progress, edit your sheet, filter the list and export the data. Continue the same research instead of rebuilding the list each time.\n\nUse Leadbase with ChatGPT, Claude, Claude Code, Codex, Cursor and other compatible MCP clients. Connect your workspace and ask for a small list in your own target market. Research uses workspace credits.",
+      "pluginRepository": "https://github.com/leadbaseio/leadbase-plugin",
+      "pricing": "Every new Leadbase workspace starts with 200 free credits. Research uses workspace credits and plan limits. See https://www.leadbase.io/pricing",
+      "privacyPolicyUrl": "https://www.leadbase.io/en/legal/privacy",
+      "supportUrl": "https://www.leadbase.io/en/contact",
+      "termsOfServiceUrl": "https://www.leadbase.io/en/legal/terms"
     }
+  },
+  "repository": {
+    "url": "https://github.com/leadbaseio/leadbase-plugin",
+    "source": "github"
   }
 }
